@@ -1,0 +1,31 @@
+<div id="changer">Change Order</div>
+<br>
+<div id="home">
+    how do work this?
+</div>
+
+<script>
+    var home = document.getElementById("home");
+    var myElement = document.createElement("div");
+    myElement.id = "myElement";
+    myElement.className = "Element";
+    myElement.textContent = "Good Job.";
+
+    document.getElementById("home").appendChild(myElement);
+    
+    var myElement2 = document.createElement("div");
+    myElement2.id = "myElement2"
+    myElement2.textContent = "Second Element."
+
+    document.getElementById("home").appendChild(myElement2);
+    //https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
+    //https://developer.mozilla.org/en-US/docs/Web/API/Element
+</script>
+
+<script>
+    document.getElementById("changer").addEventListener("click", ()=>{
+        home.children[0].before(home.children[1]);
+    })
+    //https://stackoverflow.com/questions/9732624/how-to-swap-dom-child-nodes-in-javascript
+    //https://developer.mozilla.org/en-US/docs/Web/API/Node/insertBefore
+</script>
